@@ -47,7 +47,7 @@ for index, card in enumerate(cards):
     if not isinstance(oracle_id, str) or not oracle_id:
         fail(f"cards[{index}].oracle_id must be a non-empty string")
 
-    if not re.match(r"^https://scryfall\\.com/", card["scryfall_uri"]):
+    if not re.match(r"^https://scryfall\.com/", card["scryfall_uri"]):
         fail(f"cards[{index}].scryfall_uri must be a Scryfall URL")
 
     if card["owned"] is not True:
