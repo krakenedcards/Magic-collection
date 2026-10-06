@@ -1,4 +1,107 @@
 {
   "version": 1,
-  "cards": []
+  "cards": [
+    {
+      "oracle_id": "38515f89-348b-4cf3-b7bd-1f6fe4ce2fba",
+      "name": "Adeline, Resplendent Cathar",
+      "scryfall_uri": "https://scryfall.com/card/mid/1/adeline-resplendent-cathar",
+      "mana_cost": "{1}{W}{W}",
+      "cmc": 3,
+      "type_line": "Legendary Creature — Human Knight",
+      "colors": ["W"],
+      "color_identity": ["W"],
+      "oracle_text": "Vigilance\nAdeline's power is equal to the number of creatures you control.\nWhenever you attack, for each opponent, create a 1/1 white Human creature token that's tapped and attacking that player or a planeswalker they control.",
+      "keywords": ["Vigilance"],
+      "legalities": {},
+      "power": "*",
+      "toughness": "4",
+      "owned": true
+    },
+    {
+      "oracle_id": "73d8c33d-916a-4220-96ae-9622aad36210",
+      "name": "Call the Coppercoats",
+      "scryfall_uri": "https://scryfall.com/card/ncc/195/call-the-coppercoats",
+      "mana_cost": "{2}{W}",
+      "cmc": 3,
+      "type_line": "Instant",
+      "colors": ["W"],
+      "color_identity": ["W"],
+      "oracle_text": "Strive — This spell costs {1}{W} more to cast for each target beyond the first. Choose any number of target opponents. Create X 1/1 white Human Soldier creature tokens, where X is the number of creatures those opponents control.",
+      "keywords": ["Strive"],
+      "legalities": {},
+      "owned": true
+    },
+    {
+      "oracle_id": "e633412b-e36b-4ec5-b0d0-7cb24f7503f4",
+      "name": "Dollmaker's Shop // Porcelain Gallery",
+      "scryfall_uri": "https://scryfall.com/card/dsk/4/dollmakers-shop-porcelain-gallery",
+      "mana_cost": "{1}{W} // {4}{W}{W}",
+      "cmc": 8,
+      "type_line": "Enchantment — Room // Enchantment — Room",
+      "colors": ["W"],
+      "color_identity": ["W"],
+      "oracle_text": "Dollmaker's Shop — Whenever one or more non-Toy creatures you control attack a player, create a 1/1 white Toy artifact creature token.\n\nPorcelain Gallery — Creatures you control have base power and toughness each equal to the number of creatures you control.",
+      "keywords": [],
+      "legalities": {},
+      "owned": true,
+      "card_faces": [
+        {
+          "name": "Dollmaker's Shop",
+          "mana_cost": "{1}{W}",
+          "type_line": "Enchantment — Room",
+          "oracle_text": "Whenever one or more non-Toy creatures you control attack a player, create a 1/1 white Toy artifact creature token."
+        },
+        {
+          "name": "Porcelain Gallery",
+          "mana_cost": "{4}{W}{W}",
+          "type_line": "Enchantment — Room",
+          "oracle_text": "Creatures you control have base power and toughness each equal to the number of creatures you control."
+        }
+      ]
+    },
+    {
+      "oracle_id": "55f3c721-e13a-406e-bc8e-d6cdc91ac477",
+      "name": "Authority of the Consuls",
+      "scryfall_uri": "https://scryfall.com/card/kld/7/authority-of-the-consuls",
+      "mana_cost": "{W}",
+      "cmc": 1,
+      "type_line": "Enchantment",
+      "colors": ["W"],
+      "color_identity": ["W"],
+      "oracle_text": "Creatures your opponents control enter tapped. Whenever a creature an opponent controls enters, you gain 1 life.",
+      "keywords": [],
+      "legalities": {},
+      "owned": true
+    },
+    {
+      "oracle_id": "921345ce-2eaf-4b95-b65d-1c27204665ed",
+      "name": "Transmogrifying Wand",
+      "scryfall_uri": "https://scryfall.com/card/m19/247/transmogrifying-wand",
+      "mana_cost": "{3}",
+      "cmc": 3,
+      "type_line": "Artifact",
+      "colors": [],
+      "color_identity": [],
+      "oracle_text": "This artifact enters with three charge counters on it. {1}, {T}, Remove a charge counter from this artifact: Destroy target creature. Its controller creates a 2/4 white Ox creature token. Activate only as a sorcery.",
+      "keywords": [],
+      "legalities": {},
+      "owned": true
+    },
+    {
+      "oracle_id": "b0edba6f-8f54-4dc4-b952-20b57a797d60",
+      "name": "Rampart Architect",
+      "scryfall_uri": "https://scryfall.com/card/tdc/108/rampart-architect",
+      "mana_cost": "{3}{G}",
+      "cmc": 4,
+      "type_line": "Creature — Elephant Advisor",
+      "colors": ["G"],
+      "color_identity": ["G"],
+      "oracle_text": "Whenever this creature enters or attacks, create a 1/3 white Wall creature token with defender. Whenever a creature you control with defender dies, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+      "keywords": [],
+      "legalities": {},
+      "power": "3",
+      "toughness": "4",
+      "owned": true
+    }
+  ]
 }
