@@ -2,7 +2,10 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Magic Collection",
   "type": "object",
-  "required": ["version", "cards"],
+  "required": [
+    "version",
+    "cards"
+  ],
   "properties": {
     "version": {
       "type": "integer",
@@ -33,45 +36,166 @@
         "owned"
       ],
       "properties": {
-        "oracle_id": { "type": "string", "minLength": 1 },
-        "name": { "type": "string", "minLength": 1 },
+        "oracle_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
         "scryfall_uri": {
           "type": "string",
           "pattern": "^https://scryfall\\.com/"
         },
-        "mana_cost": { "type": "string" },
-        "cmc": { "type": "number", "minimum": 0 },
-        "type_line": { "type": "string" },
+        "mana_cost": {
+          "type": "string"
+        },
+        "cmc": {
+          "type": "number",
+          "minimum": 0
+        },
+        "type_line": {
+          "type": "string"
+        },
         "colors": {
           "type": "array",
-          "items": { "type": "string", "enum": ["W", "U", "B", "R", "G"] },
+          "items": {
+            "type": "string",
+            "enum": [
+              "W",
+              "U",
+              "B",
+              "R",
+              "G"
+            ]
+          },
           "uniqueItems": true
         },
         "color_identity": {
           "type": "array",
-          "items": { "type": "string", "enum": ["W", "U", "B", "R", "G", "C"] },
+          "items": {
+            "type": "string",
+            "enum": [
+              "W",
+              "U",
+              "B",
+              "R",
+              "G",
+              "C"
+            ]
+          },
           "uniqueItems": true
         },
-        "oracle_text": { "type": "string" },
+        "oracle_text": {
+          "type": "string"
+        },
         "keywords": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "uniqueItems": true
         },
-        "power": { "type": ["string", "null"] },
-        "toughness": { "type": ["string", "null"] },
-        "loyalty": { "type": ["string", "null"] },
-        "defense": { "type": ["string", "null"] },
+        "power": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "toughness": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "loyalty": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "defense": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "produced_mana": {
           "type": "array",
-          "items": { "type": "string", "enum": ["W", "U", "B", "R", "G", "C"] },
+          "items": {
+            "type": "string",
+            "enum": [
+              "W",
+              "U",
+              "B",
+              "R",
+              "G",
+              "C"
+            ]
+          },
           "uniqueItems": true
         },
         "legalities": {
           "type": "object",
-          "additionalProperties": { "type": "string" }
+          "additionalProperties": {
+            "type": "string"
+          }
         },
-        "owned": { "type": "boolean" }
+        "owned": {
+          "type": "boolean"
+        },
+        "card_faces": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "type_line",
+              "oracle_text"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "mana_cost": {
+                "type": "string"
+              },
+              "type_line": {
+                "type": "string"
+              },
+              "oracle_text": {
+                "type": "string"
+              },
+              "colors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "power": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "toughness": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "loyalty": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        }
       },
       "additionalProperties": false
     }
