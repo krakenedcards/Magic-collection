@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Magic Collection",
+  "type": "object",
+  "required": ["version", "cards"],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/card"
+      }
+    }
+  },
+  "$defs": {
+    "card": {
+      "type": "object",
+      "required": [
+        "oracle_id",
+        "name",
+        "scryfall_uri",
+        "mana_cost",
+        "cmc",
+        "type_line",
+        "colors",
+        "color_identity",
+        "oracle_text",
+        "keywords",
+        "legalities",
+        "owned"
+      ],
+      "properties": {
+        "oracle_id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "scryfall_uri": {
+          "type": "string",
+          "pattern": "^https://scryfall\\.com/"
+        },
+        "mana_cost": { "type": "string" },
+        "cmc": { "type": "number", "minimum": 0 },
+        "type_line": { "type": "string" },
+        "colors": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["W", "U", "B", "R", "G"] },
+          "uniqueItems": true
+        },
+        "color_identity": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["W", "U", "B", "R", "G", "C"] },
+          "uniqueItems": true
+        },
+        "oracle_text": { "type": "string" },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "power": { "type": ["string", "null"] },
+        "toughness": { "type": ["string", "null"] },
+        "loyalty": { "type": ["string", "null"] },
+        "defense": { "type": ["string", "null"] },
+        "produced_mana": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["W", "U", "B", "R", "G", "C"] },
+          "uniqueItems": true
+        },
+        "legalities": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "owned": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  }
+}
